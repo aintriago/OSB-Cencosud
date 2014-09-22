@@ -1,0 +1,14 @@
+(:: pragma bea:global-element-parameter parameter="$reqNoviosParis1" element="ns1:reqNoviosParis" location="../Schemas/NoviosParisRequest.xsd" ::)
+
+declare namespace ns1 = "http://xmlns.cencosud.corp/NoviosParisRequest";
+declare namespace ns0 = "http://xmlns.cencosud.corp/Core/EBM/Common/EBM";
+declare namespace xf = "http://tempuri.org/DSCL_NoviosParis_INTXXXX/Resources/XQuery/NoviosParis_to_SendNoviosParis/";
+
+declare function xf:NoviosParis_to_SendNoviosParis($reqNoviosParis1 as element(ns1:reqNoviosParis))
+    as xs:string {
+        concat($reqNoviosParis1/NoviosParisCase/CNTypeOperation , $reqNoviosParis1/NoviosParisCase/SRNumber , $reqNoviosParis1/NoviosParisCase/CNTypeList , $reqNoviosParis1/NoviosParisCase/CNNoviosCode , $reqNoviosParis1/NoviosParisCase/CNEvent_Type , $reqNoviosParis1/NoviosParisCase/CNEvenDate , $reqNoviosParis1/NoviosParisCase/CNStoreId , $reqNoviosParis1/NoviosParisCase/CNGiftRegion , $reqNoviosParis1/NoviosParisCase/CNGiftCommune , $reqNoviosParis1/NoviosParisCase/CNGiftAddress , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/LastName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/MotherMaidenName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/FirstName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/DateofBirth , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/CNDocumentId , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/CNVerificationDigit , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/Region , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/CNCommune , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/Address , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/Phone , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/CellularPhone , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/EmailAddress , $reqNoviosParis1/NoviosParisCase/NoviosParisClient1/CNCencosudCard , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPLastName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPMotherMaidenName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPFirstName , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPDateofBirth , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPDocumentId , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNVerificationDigit , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPRegion , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPCommune , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPAddress , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPPhone , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPCellularPhone , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPEmailAdd , $reqNoviosParis1/NoviosParisCase/NoviosParisClient2/CNSPCencosudCard)
+};
+
+declare variable $reqNoviosParis1 as element(ns1:reqNoviosParis) external;
+
+xf:NoviosParis_to_SendNoviosParis($reqNoviosParis1)

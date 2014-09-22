@@ -1,0 +1,15 @@
+<xsd:schema elementFormDefault="qualified"
+xmlns="http://xmlns.cencosud.corp/NoviosParisResponse"
+targetNamespace="http://xmlns.cencosud.corp/NoviosParisResponse"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="respNoviosParis" type="NoviosParisCaseResponseType"/>
+
+	<xsd:complexType name="NoviosParisCaseResponseType">
+		<xsd:sequence>
+			<xsd:element name="Novioscode" type="xsd:integer" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ErrorCode" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="ErrorMessage" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

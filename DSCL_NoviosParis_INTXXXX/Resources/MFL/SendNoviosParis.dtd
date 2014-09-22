@@ -1,0 +1,2 @@
+<!ELEMENT respNoviosParis (Response)>
+<!ELEMENT Response EMPTY>
