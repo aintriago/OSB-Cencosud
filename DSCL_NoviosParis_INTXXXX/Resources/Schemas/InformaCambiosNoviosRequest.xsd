@@ -1,20 +1,20 @@
-<xsd:schema targetNamespace="http://xmlns.cencosud.corp/NoviosParisRequest" 
+<xsd:schema targetNamespace="http://xmlns.cencosud.corp/InformaCambiosNoviosRequest" 
 xmlns:commonebm="http://xmlns.cencosud.corp/Core/EBM/Common/EBM" 
-xmlns="http://xmlns.cencosud.corp/NoviosParisRequest" 
+xmlns="http://xmlns.cencosud.corp/InformaCambiosNoviosRequest" 
 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:import namespace="http://xmlns.cencosud.corp/Core/EBM/Common/EBM" schemaLocation="../../../CommonCore/EBM/Common/EBMV2.xsd"/>
 
-	<xsd:element name="reqNoviosParis" type="NoviosParisType"/>
+	<xsd:element name="reqInformaCambiosNovios" type="InformaCambiosNoviosType"/>
 
-	<xsd:complexType name="NoviosParisType">
+	<xsd:complexType name="InformaCambiosNoviosType">
 		<xsd:sequence>
 			<xsd:element name="EBM" type="commonebm:EBMType"/>
-			<xsd:element name="NoviosParisCase" type="NoviosParisCaseRequestType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="InformaCambiosNoviosCase" type="InformaCambiosNoviosCaseRequestType" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="NoviosParisCaseRequestType">
+	<xsd:complexType name="InformaCambiosNoviosCaseRequestType">
 		<xsd:sequence>
 			<xsd:element name="CNTypeOperation" type="xsd:string" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="SRNumber" type="xsd:string" minOccurs="1" maxOccurs="1"/>
@@ -26,12 +26,12 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 			<xsd:element name="CNGiftRegion" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="CNGiftCommune" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="CNGiftAddress" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="NoviosParisClient1" type="NoviosParisClient1RequestType" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="NoviosParisClient2" type="NoviosParisClient2RequestType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="InformaCambiosNoviosClient1" type="InformaCambiosNoviosClient1RequestType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="InformaCambiosNoviosClient2" type="InformaCambiosNoviosClient2RequestType" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="NoviosParisClient1RequestType">
+	<xsd:complexType name="InformaCambiosNoviosClient1RequestType">
 		<xsd:sequence>
 			<xsd:element name="LastName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="MotherMaidenName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
@@ -49,7 +49,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="NoviosParisClient2RequestType">
+	<xsd:complexType name="InformaCambiosNoviosClient2RequestType">
 		<xsd:sequence>
 			<xsd:element name="CNSPLastName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
 			<xsd:element name="CNSPMotherMaidenName" type="xsd:string" minOccurs="0" maxOccurs="1"/>

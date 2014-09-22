@@ -1,4 +1,4 @@
-(:: pragma bea:global-element-parameter parameter="$reqNoviosParis1" element="ns1:reqNoviosParis" location="../Schemas/NoviosParisRequest.xsd" ::)
+(:: pragma bea:global-element-parameter parameter="$reqNoviosParis1" element="ns1:reqNoviosParis" location="../Schemas/InformaCambiosNoviosRequest.xsd" ::)
 
 declare namespace ns1 = "http://xmlns.cencosud.corp/NoviosParisRequest";
 declare namespace ns0 = "http://xmlns.cencosud.corp/Core/EBM/Common/EBM";
